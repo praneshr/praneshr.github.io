@@ -55,7 +55,7 @@ function randomCircle() {
 }
 function loading() {
   var randomStr = randomString(12)
-  var randomStr2 = randomString(35)
+  var randomStr2 = randomString(34)
   $('.peru').text(randomStr)
   $('.seira-vela').text(randomStr2)
 }
@@ -67,7 +67,7 @@ $(document).ready(function () {
   window.setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
-    $('.seira-vela').text('Web designer & Javascript Developer')
+    $('.seira-vela').text('UI designer & Javascript Developer')
     window.setTimeout(randomCircle, 3000)
   }, 10000)
 })
