@@ -1,0 +1,3 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik+One");.banner{font-family:'Rubik One', sans-serif;font-size:80px;text-transform:uppercase;position:relative;overflow:hidden;background-color:white}.banner .circle{border-radius:50%;position:absolute;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);margin-left:-50%;margin-top:-50%;-webkit-transition:-webkit-transform 30s linear;transition:transform 30s linear}.banner .title{position:absolute;bottom:100px;left:50px;color:white;z-index:100;mix-blend-mode:difference}
+
+/*# sourceMappingURL=main.css.map */
