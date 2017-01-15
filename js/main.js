@@ -70,15 +70,5 @@ $(document).ready(function () {
     $('.seira-vela').text('UI designer & Javascript Developer')
     $('body').css('overflow', 'auto')
     window.setTimeout(randomCircle, 1000)
-  }, 7000)
-
-  var top = $('header').offset().top
-  $(document).scroll(function () {
-    var scrollTop = $(document).scrollTop()
-    if ((scrollTop + 100) >= top) {
-      $('header').addClass('kuda-poo')
-    } else {
-      $('header').removeClass('kuda-poo')
-    }
-  })
+  }, 2000)
 })
