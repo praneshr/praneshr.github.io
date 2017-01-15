@@ -61,14 +61,14 @@ function loading() {
 }
 $(document).ready(function () {
   setBannerViewPort()
-  // $('body').css('overflow', 'hidden')
+  $('body').css('overflow', 'hidden')
   $(window).resize(setBannerViewPort)
   var id = window.setInterval(loading, 200)
   window.setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
     $('.seira-vela').text('UI designer & Javascript Developer')
-    // $('body').css('overflow', 'auto')
+    $('body').css('overflow', 'auto')
     window.setTimeout(randomCircle, 1000)
   }, 7000)
 
