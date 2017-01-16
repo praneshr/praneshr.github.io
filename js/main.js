@@ -72,7 +72,7 @@ $(document).ready(function () {
   window.setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
-    $('.seira-vela').text('UI designer & Javascript Developer')
+    $('.seira-vela').text('UI designer & JavaScript Developer')
     $('body').css('overflow', 'auto')
     window.setTimeout(randomCircle, 1000)
   }, 5000)
