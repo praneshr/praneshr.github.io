@@ -70,5 +70,5 @@ $(document).ready(function () {
     $('.seira-vela').text('UI designer & Javascript Developer')
     $('body').css('overflow', 'auto')
     window.setTimeout(randomCircle, 1000)
-  }, 2000)
+  }, 1000)
 })
