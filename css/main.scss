@@ -194,13 +194,13 @@ header {
         }
         &:before {
           content: "";
-          width: 10px;
-          height: 10px;
+          width: 5px;
+          height: 5px;
           border-radius: 5px;
-          top: 5px;
+          top: 8px;
           position: absolute;
-          left: -30px;
-          background-color: #d2d2d2;
+          left: -29px;
+          background-color: #dadada;
         }
       }
     }
