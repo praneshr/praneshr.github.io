@@ -63,6 +63,11 @@ $(document).ready(function () {
   setBannerViewPort()
   $('body').css('overflow', 'hidden')
   $(window).resize(setBannerViewPort)
+
+  if (window.navigator.platform.match(/win/ig)) {
+    $('body').addClass('windows')
+  }
+
   var id = window.setInterval(loading, 200)
   window.setTimeout(function () {
     window.clearInterval(id)
@@ -70,5 +75,5 @@ $(document).ready(function () {
     $('.seira-vela').text('UI designer & Javascript Developer')
     $('body').css('overflow', 'auto')
     window.setTimeout(randomCircle, 1000)
-  }, 1000)
+  }, 5000)
 })
