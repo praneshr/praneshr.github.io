@@ -6,10 +6,11 @@ $primary-color: #6356E5;
 body {
   font-family: 'Nunito', sans-serif;
   background-image: url('/img/pattern.svg');
+  overflow: hidden;
 }
 
 body.windows::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 body.windows::-webkit-scrollbar-track {
@@ -85,6 +86,7 @@ a {
 }
 .rendu {
   position: relative;
+  display: none;
 }
 .chinnatha-sceneu-irukarathu {
   position: relative;
@@ -171,6 +173,7 @@ header {
     }
 }
 .na-senjathu {
+  margin-top: 20%;
   .row {
     margin: 70px 0 0;
   }
@@ -184,6 +187,7 @@ header {
       font-weight: 600;
     }
     .matravai {
+      white-space: nowrap;
       span {
         margin-left: 50px;
         position: relative;
@@ -234,6 +238,8 @@ header {
   a {
     margin-right: 50px;
     position: relative;
+    z-index: 1;
+    background-color: #fff;
     &:after {
       content: "";
       width: 5px;
@@ -243,6 +249,7 @@ header {
       position: absolute;
       right: -27px;
       background-color: #dadada;
+      z-index: -1;
     }
     &:last-child {
       &:after {
@@ -277,19 +284,80 @@ footer {
     text-align: center;
   }
   .hosted {
+    text-align: center;
     margin-top: 20px;
     color: rgba(#FFF, 0.7);
   }
-  .inayam {
-    margin-top: 80px;
-    a:last-child {
-      margin-right: 0;
-    }
-    a:after {
-      content: none;
+  .bottom-links {
+    margin-top: 70px;
+    width: 100%;
+    max-width: 460px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 15px;
+    a {
+      background-color: transparent;
+      margin: 0;
+      &:after {
+        content: none;
+      }
     }
   }
   #git {
     color: #CCC !important;
+  }
+}
+
+.enaku-therunjathu {
+  #ux {
+    width: 60%;
+  }
+  #ui {
+    width: 90%;
+  }
+  #html {
+    width: 93%;
+  }
+  #js {
+    width: 80%;
+  }
+  #react{
+    width: 98%;
+  }
+  .enaku-therunjathu-block {
+    h4 {
+      font-weight: 600;
+    }
+    margin-bottom: 50px;
+  }
+  .enaku-therunjathu-list {
+    margin-top: 70px;
+  }
+  .percentage-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 7px;
+    .percentage {
+      height: 100%;
+      background-color: #62D2A2;
+    }
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .vetti-scene {
+    .peru {
+      font-size: 60px;
+      position: absolute;
+      bottom: 200px;
+      left: 15px;
+    }
+    .seira-vela {
+      font-size: 20px;
+      position: absolute;
+      bottom: 160px;
+      left: 15px;
+    }
   }
 }

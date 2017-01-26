@@ -12,14 +12,14 @@
     <meta name="twitter:creator" value="@pranesh_ravi">
     <meta name="twitter:title" content="Pranesh Ravi">
     <meta name="twitter:description" content="Pranesh Ravi's personal website | UI Designer & Javascript Developer at Indix">
-    <meta name="twitter:image" content="//praneshr.github.io/img/praneshr.png">
+    <meta name="twitter:image" content="//praneshravi.in/img/praneshr.png">
 
     <meta content="Pranesh Ravi" property="og:site_name">
     <meta content="Pranesh Ravi" property="og:title">
     <meta content="Pranesh Ravi's personal website | UI Designer & Javascript Developer at Indix" property="og:description">
     <meta content="website" property="og:type">
-    <meta content="//praneshr.github.io" property="og:url">
-    <meta content="//praneshr.github.io/img/praneshr.png" property="og:image" />
+    <meta content="//praneshravi.in" property="og:url">
+    <meta content="//praneshravi.in/img/praneshr.png" property="og:image" />
 
     <meta name="theme-color" content="#6356E5">
     <meta name="msapplication-navbutton-color" content="#6356E5">
@@ -48,8 +48,8 @@
 
   <body>
     <div class="vetti-scene">
-      <div class="peru">Pranesh Ravi</div>
-      <h2 class="seira-vela">UI designer & JavaScript Developer</h2>
+      <div class="peru"></div>
+      <h2 class="seira-vela"></h2>
     </div>
     <div class="rendu">
       <div class="container">
@@ -59,7 +59,7 @@
             I’m a 23 year old self-taught UI designer and a JavaScript developer based in Chennai, India. I’ve nearly 4 years of experience in UI design and development, which includes 2 years of professional experience. I've an undergraduate degree in Computer Science Engineering. Currently, I’m designing and developing world class Web Applications along with a group of brilliant people at Indix(<a href="//indix.com/join-us/" class="fancy">We’re hiring</a>).
           </p>
           <p id="second">
-            As a small kid, I always had a penchant for designing. What started as a hobby in video-editing became a passion in UI designing and development. I care a great deal about how people respond to design. I’ve a strong obsession with Diffused drop shadows, Whitespace, Geometric shapes and ReactJS. I’m very fluent in HTML, CSS, SCSS and improving on my JavaScript.
+            As a small kid, I always had a penchant for designing. What started as a hobby in video-editing became a passion in UI designing and development. I care a great deal about how people respond to design. I’ve a strong obsession with Diffused drop shadows, Whitespace, Geometric shapes and React Js. I’m fluent in HTML, CSS, SCSS, Node Js, React Js and Object-oriented Js. And I'm comfortable with tools and transpliers like Webpack, Gulp, Babel and Typescript.
           </p>
           <div class="inayam">
             <a target="_top" href="mailto:talkto@praneshravi.in" class="fancy">Email</a><a target="_blank" id="git" href="//github.com/praneshr" class="fancy">Github</a><a target="_blank" id="so" href="//stackoverflow.com/users/4945468/pranesh-ravi" class="fancy">Stackoverflow</a> <a target="_blank" id="hn" href="//hashnode.com/@praneshr" class="fancy">Hashnode</a><a href="//medium.com/@praneshravi" id="me" class="fancy">Medium</a>
@@ -71,6 +71,44 @@
             <img src="img/beach.JPG" alt="">
           </div>
           <a href="https://goo.gl/maps/PLzUKxDVGYo" target="_blank">The Shore Temple, Mahabalipuram</a>
+        </div>
+        <div class="enaku-therunjathu">
+          <h2>Skills</h2>
+          <div class="enaku-therunjathu-list">
+            <div class="enaku-therunjathu-block">
+              <h4>Experience Design</h4>
+              <div class="percentage-container">
+                <div class="percentage" id="ux"></div>
+              </div>
+            </div>
+            <div class="enaku-therunjathu-block">
+              <h4>User Interface Design</h4>
+              <div class="percentage-container">
+                <div class="percentage" id="ui"></div>
+              </div>
+            </div>
+            <div class="enaku-therunjathu-block">
+              <h4>HTML / CSS / SCSS</h4>
+              <div class="percentage-container">
+                <div class="percentage" id="html"></div>
+              </div>
+            </div>
+            <div class="enaku-therunjathu-block">
+              <h4>JavaScript / Node Js</h4>
+              <div class="percentage-container">
+                <div class="percentage" id="js"></div>
+              </div>
+            </div>
+            <div class="enaku-therunjathu-block">
+              <h4>React Js</h4>
+              <div class="percentage-container">
+                <div class="percentage" id="react"></div>
+              </div>
+            </div>
+            <div class="enna-pathi">
+              <p>In addition, I've a good knowlege about version control systems like Github and Bitbucket and CI systems like GoCD, Travis CI, CircleCI, Snap CI. Also, I've a good knowlege about Docker and few basics about Kubernetes.</p>
+            </div>
+          </div>
         </div>
         <div class="na-senjathu">
           <h2>Projects</h2>
@@ -189,13 +227,36 @@
         <div class="hosted">
           This site is hosted using Github Pages and the code is available on <a href="//github.com/praneshr/praneshr.github.io" class="fancy">Github</a>
         </div>
-         <div class="inayam">
+         <div class="bottom-links inayam">
             <a target="_top" href="mailto:talkto@praneshravi.in" class="fancy">Email</a><a target="_blank" id="git" href="//github.com/praneshr" class="fancy">Github</a><a target="_blank" id="so" href="//stackoverflow.com/users/4945468/pranesh-ravi" class="fancy">Stackoverflow</a> <a target="_blank" id="hn" href="//hashnode.com/@praneshr" class="fancy">Hashnode</a><a href="//medium.com/@praneshravi" id="me" class="fancy">Medium</a>
           </div>
       </footer>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script>
+      function setBannerViewPort() {
+        document.querySelector('.vetti-scene').style.height = window.innerHeight + 'px'
+      }
+      function randomString(len, charSet) {
+          charSet = charSet || 'abcdefghijklmnopqrstuiwxyz&';
+          var randomString = '';
+          for (var i = 0; i < len; i++) {
+              var randomPoz = Math.floor(Math.random() * charSet.length);
+              randomString += charSet.substring(randomPoz,randomPoz+1);
+          }
+          return randomString;
+      }
+
+      function loading() {
+        var randomStr = randomString(7)
+        var randomStr1 = randomString(4)
+        var randomStr2 = randomString(34)
+        document.querySelector('.peru').innerText = randomStr + ' ' + randomStr1
+        document.querySelector('.seira-vela').innerText = randomStr2
+      }
+      setBannerViewPort()
+      var id = window.setInterval(loading, 200)
+    </script>
+    <script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script async src="js/main.js"></script>
   </body>
 </html>

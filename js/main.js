@@ -11,16 +11,6 @@ var colorArray = [
   '#53354A',
 ]
 
-function randomString(len, charSet) {
-    charSet = charSet || 'abcdefghijklmnopqrstuiwxyz& ';
-    var randomString = '';
-    for (var i = 0; i < len; i++) {
-        var randomPoz = Math.floor(Math.random() * charSet.length);
-        randomString += charSet.substring(randomPoz,randomPoz+1);
-    }
-    return randomString;
-}
-
 function setBannerViewPort() {
   $('.vetti-scene').height(window.innerHeight)
 }
@@ -53,27 +43,19 @@ function randomCircle() {
 
   window.setTimeout(randomCircle, 10000)
 }
-function loading() {
-  var randomStr = randomString(12)
-  var randomStr2 = randomString(34)
-  $('.peru').text(randomStr)
-  $('.seira-vela').text(randomStr2)
-}
-$(document).ready(function () {
+$(window).on('load', function () {
   setBannerViewPort()
-  $('body').css('overflow', 'hidden')
   $(window).resize(setBannerViewPort)
-
-  if (window.navigator.platform.match(/win/ig)) {
-    $('body').addClass('windows')
-  }
-
-  var id = window.setInterval(loading, 200)
-  window.setTimeout(function () {
+  setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
     $('.seira-vela').text('UI designer & JavaScript Developer')
     $('body').css('overflow', 'auto')
+    $('.rendu').css('display', 'block')
     window.setTimeout(randomCircle, 1000)
-  }, 5000)
+  }, 1500)
+
+  if (window.navigator.platform.match(/win/ig)) {
+    $('body').addClass('windows')
+  }
 })
