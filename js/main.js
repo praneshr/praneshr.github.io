@@ -46,14 +46,24 @@ function randomCircle() {
 $(window).on('load', function () {
   setBannerViewPort()
   $(window).resize(setBannerViewPort)
+  $('.percentage-container').addClass('no-width')
   setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
-    $('.seira-vela').text('UI designer & JavaScript Developer')
+    $('.seira-vela').text('UI designer & Full-Stack Developer')
     $('body').css('overflow', 'auto')
     $('.rendu').css('display', 'block')
     window.setTimeout(randomCircle, 1000)
   }, 1500)
+
+  $(document).scroll(function () {
+    var imgOffset = $('.enaku-therunjathu>h2').offset().top
+    var scroll = $(document).scrollTop()
+    var hasClass = $('.percentage-container').hasClass('no-width')
+    if (imgOffset < (scroll + (window.innerWidth > 1200 ? 350 : 150))) {
+      $('.percentage-container').removeClass('no-width')
+    }
+  })
 
   if (window.navigator.platform.match(/win/ig)) {
     $('body').addClass('windows')

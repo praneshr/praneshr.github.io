@@ -22,6 +22,7 @@ body.windows::-webkit-scrollbar-thumb {
 }
 
 h2 {
+  font-size: 50px;
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
   margin: 0;
@@ -42,6 +43,13 @@ a {
     text-decoration: none;
     color: $primary-color;
   }
+}
+
+#sp {
+  color: #2ebd59;
+}
+#you {
+  color: #cd201f;
 }
 .rendu {
   margin-top: 20%;
@@ -76,6 +84,7 @@ a {
     mix-blend-mode: difference;
   }
   .seira-vela {
+    font-size: 30px;
     position: absolute;
     bottom: 260px;
     left: 53px;
@@ -168,7 +177,7 @@ header {
         bottom: -10px;
         width: 30px;
         height: 3px;
-        background-color: $primary-color;
+        // background-color: $primary-color;
       }
     }
 }
@@ -338,9 +347,16 @@ footer {
     margin-top: 20px;
     width: 100%;
     height: 7px;
+    background-color: #f1f1f1;
+    &.no-width {
+      .percentage {
+        width: 0 !important;
+      }
+    }
     .percentage {
       height: 100%;
-      background-color: #62D2A2;
+      background: linear-gradient(62deg, rgb(99, 86, 229), rgb(162, 98, 210));
+      transition: width 1.5s ease-in-out;
     }
   }
 }
