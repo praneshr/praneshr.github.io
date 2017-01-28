@@ -25,7 +25,7 @@
     <meta name="msapplication-navbutton-color" content="#6356E5">
     <meta name="apple-mobile-web-app-status-bar-style" content="#6356E5">
     <title>Pranesh Ravi</title>
-    <link rel="shortcut icon" type="image/png" href="/img/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="/img/logo.png"/>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
 
@@ -50,9 +50,22 @@
     <div class="vetti-scene">
       <div class="peru"></div>
       <div class="seira-vela"></div>
+      <a href="#about" data-scroll>
+        <div class="down">
+          <img src="img/down.svg" alt="">
+        </div>
+      </a>
     </div>
     <div class="rendu">
-      <div class="container">
+      <header class="hidden-xs hidden-sm hidden-md">
+        <img src="/img/logo.svg" alt="">
+      </header>
+      <div class="hidden-xs hidden-sm hidden-md my-nav">
+        <a data-scroll href="#about" class="fancy">About Me</a>
+        <a data-scroll href="#skills" class="fancy">Skills</a>
+        <a data-scroll href="#projects" class="fancy">Projects</a>
+      </div>
+      <div class="container" id="about">
         <h2>About Me</h2>
         <div class="enna-pathi">
           <p>
@@ -72,7 +85,7 @@
           </div>
           <a href="https://goo.gl/maps/PLzUKxDVGYo" target="_blank">The Shore Temple, Mahabalipuram</a>
         </div>
-        <div class="enaku-therunjathu">
+        <div class="enaku-therunjathu" id="skills">
           <h2>Skills</h2>
           <div class="enaku-therunjathu-list">
             <div class="enaku-therunjathu-block">
@@ -110,7 +123,7 @@
             </div>
           </div>
         </div>
-        <div class="na-senjathu">
+        <div class="na-senjathu" id="projects">
           <h2>Projects</h2>
           <div class="row">
             <div class="thalaipu-matrum-matravai">
@@ -166,7 +179,7 @@
               </div>
             </div>
             <div class="ithu-enna-seiyum">
-              React easy bind is a utility module which helps to bind React component methods to the component's instances. It also provides API to pass extra parameters to the component method with ease.
+              React easy bind is a utility module which helps to bind React component methods to the component's instances. It also provides API to pass extra parameters to the component methods with ease.
             </div>
           </div>
 
@@ -230,6 +243,7 @@
          <div class="bottom-links inayam">
             <a target="_top" href="mailto:talkto@praneshravi.in" class="fancy">Email</a><a target="_blank" id="git" href="//github.com/praneshr" class="fancy">Github</a><a target="_blank" id="so" href="//stackoverflow.com/users/4945468/pranesh-ravi" class="fancy">Stackoverflow</a> <a target="_blank" id="hn" href="//hashnode.com/@praneshr" class="fancy">Hashnode</a><a href="//medium.com/@praneshravi" id="me" class="fancy">Medium</a>
           </div>
+          <p>Best viewed in Webkit based browsers.</p>
       </footer>
     </div>
     <script>
@@ -258,5 +272,11 @@
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.2.1/js/smooth-scroll.min.js"></script>
+    <script>
+       smoothScroll.init({
+         offset: 150,
+       });
+    </script>
   </body>
 </html>

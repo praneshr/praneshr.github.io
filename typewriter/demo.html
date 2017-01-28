@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Demo|TypeWriter</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/TypeWriter.js"></script>
+    </head>
+    <body onload="static()" style="background:#EEEEEE;color:#D2527F;overflow:visible">
+        <a href="/index.html">
+            <h1 style="color:#D2527F;text-align:center;font-family:myfont">TypeWriter.js</h1>
+        </a>
+        <p id="insert-demo"></p>
+        <div style="margin-top:30px;z-index:+30;" id="demo">
+            <center>
+                <input type="text" placeholder="Min Speed in milli sec" id="min">
+                <input type="text" placeholder="Max Speed in milli sec" id="max">
+                <button type="button" onclick="Type()">TypeWriter It</button>
+            </center>
+        </div>
+        <script>
+            loc = document.getElementById("insert-demo");
+            str = "Eu irure commodo consectetur, te et reprehenderit, ingeniis irure amet consequat fore, expetendis varias consequat. Mandaremus quis iudicem. Ne quem fore ne arbitror. A quid varias te eiusmod, summis mentitum familiaritatem. An quae doctrina efflorescere, varias domesticarum cupidatat nisi singulis, nisi ut exaliqua iudicem non cillum deserunt firmissimum. Ut aliqua quamquam iudicem. An anim probant."
+            function static(){
+                loc.innerHTML=str;
+            }
+            function Type(){
+                str=str;
+                len = str.length;
+                min = document.getElementById("min").value;
+                max = document.getElementById("max").value;
+                var reg = /^[0-9]+$/;
+                min_t = reg.test(min);
+                max_t = reg.test(max);
+                gt = parseInt(min) < parseInt(max);
+                if (min_t == true && max_t == true && gt == true)
+                {
+                    if(len > 0){
+                        typewrite(str,loc,parseInt(min),parseInt(max));
+                    }
+                    len--;
+                }
+                else{
+                    alert("Possible Errors\n1) Enter Number!!!Not Charecters\n2) Min value is greater than max value\n3) Fields cannot be blank")
+                }
+            }
+        </script>
+
+    </body>
+
+</html>

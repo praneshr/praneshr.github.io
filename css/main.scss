@@ -64,6 +64,38 @@ a {
   position: relative;
   overflow: hidden;
   background-color: #0F1021;
+  z-index: 10;
+  .down {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    background-color: #fff;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s linear 2s;
+    animation: scroll 2s infinite;
+    @keyframes scroll {
+      0% {
+        bottom: 30px;
+      }
+      15% {
+        bottom: 20px;
+      }
+      30% {
+        bottom: 30px;
+      }
+    }
+    img {
+      width: 100%;
+      padding: 8px;
+    }
+  }
   .rangoli-vattam {
     border-radius: 50%;
     position: absolute;
@@ -102,36 +134,43 @@ a {
   position: relative;
 }
 header {
-  position: absolute;
-  top: 0;
-  .chinnatha-sceneu {
-    margin: 0 auto 50px;
-    transition: margin 0.1s linear;
-    h2 {
-      font-family: 'Rubik One', sans-serif;
-      text-transform: uppercase;
-      position: relative;
-      margin-bottom: 5px;
-    }
-    span {
-      font-size: 18px;
-      font-weight: 600;
-      position: relative;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -10px;
-        width: 30px;
-        height: 3px;
-        background-color: $primary-color;
-      }
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+  z-index: 6;
+  color: #FFF;
+  pointer-events: none;
+  img {
+    width: 100%;
+  }
+}
+.my-nav {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 40px;
+  height: 80px;
+  width: 80px;
+  transition: all 0.3s ease;
+  z-index: 5;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(51, 51, 51, 0.3);
+  a {
+    margin: 0 40px;
+    color: #fff;
+    &:first-child {
+      margin-left: 150px;
     }
   }
-  &.kuda-poo {
-    position: fixed;
-    top: 0;
-    margin-top: 90px;
+  &:hover {
+    width: 600px;
   }
 }
 .enna-pathi {
@@ -298,6 +337,12 @@ footer {
     margin-top: 20px;
     color: rgba(#FFF, 0.7);
   }
+  p {
+    opacity: 0.5;
+    margin-top: 20px;
+    position: relative;
+    top: 15px;
+  }
   .bottom-links {
     margin-top: 70px;
     width: 100%;
@@ -330,7 +375,7 @@ footer {
     width: 93%;
   }
   #js {
-    width: 80%;
+    width: 90%;
   }
   #react{
     width: 98%;

@@ -50,9 +50,10 @@ $(window).on('load', function () {
   setTimeout(function () {
     window.clearInterval(id)
     $('.peru').text('Pranesh Ravi')
-    $('.seira-vela').text('UI designer & Full-Stack Developer')
+    $('.seira-vela').text('UI designer & Full-Stack developer')
     $('body').css('overflow', 'auto')
     $('.rendu').css('display', 'block')
+    $('.down').css('opacity', 1)
     window.setTimeout(randomCircle, 1000)
   }, 1500)
 

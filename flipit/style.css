@@ -1,0 +1,16 @@
+red{
+    color: red;
+}
+blue{
+    color:blue;
+}
+underline{
+    text-decoration: underline;
+}
+linethrough{
+    text-decoration: line-through;
+}
+hello{
+    font-size: 50px;
+    color: yellow;
+}

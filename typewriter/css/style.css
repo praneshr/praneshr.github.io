@@ -1,0 +1,348 @@
+@font-face{
+    font-family:'myfont';
+    src:url("../fonts/font.ttf") format('truetype');
+}
+@font-face{
+    font-family:'roboto';
+    src:url("../fonts/font2.ttf") format('truetype');
+}
+.row{
+    max-width: 100%;
+}
+::selection{
+    background: #FFF;
+    color: #D2527F;
+}
+#insert{
+    font-family: 'myfont';
+    font-size: 80px;
+}
+body{
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+#insert-demo{
+    text-align:center;font-size:30px;font-family:roboto;width:100%;margin-top:100px;
+}
+.first{
+    background: #D2527F;
+}
+.second{
+    background: #EEEEEE;
+    color: #D2527F;
+    transition: all .5s ease;
+}
+.content{
+    text-align: center;
+    color: #FFF;
+    font-size: 60px;
+    transition: all .5s ease;
+}
+#blink{
+    transition: all .2s ease;
+    height: 100px;
+    width: 5px;
+    position:absolute;
+    background: #FFF;
+}
+#attach{
+    width: 50px;
+    height: 20px;
+    position: absolute;
+    background: #FFF;
+}
+#circle:hover{
+    transform: scale(1.1);
+}
+#circle{
+    width: 100px;
+    height: 100px;
+    position:fixed;
+    border-radius: 50px;
+    bottom: 100px;
+    right :100px;
+    background: #FFF;
+    //opacity: .5;
+    cursor: pointer;
+    z-index: +2;
+    overflow: hidden;
+    transition: all 1s ease;
+}
+#circlee{
+    z-index: +1;
+    background: #FFF;
+    overflow: hidden;
+    opacity: .9;
+    cursor: default;
+    position: fixed;
+    bottom: 100px;
+    right :100px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    color: #FFF;
+    transition: all .5s ease-in-out;
+}
+#circle span{
+    width: 50px;
+    height: 5px;
+    border-radius: 50px;
+    background: #D2527F;
+    position: absolute;
+    top: 50px;
+    left: 25px;
+    transition: all .5s ease;
+}
+#circle span:nth-child(1){
+    margin-top: -10px;
+}
+#circle span:nth-child(2){
+    margin-top: 10px;
+}
+.tog span:nth-child(1){
+    background: black;
+}
+.menu-list{
+    position: fixed;
+    color: #D2527F;
+    top: 0;
+    font-family: fantasy;
+    font-size: 40px;
+    text-align: center;
+    z-index: +5;
+    top:20%;
+}
+.menu-list div{
+    padding: 15px;
+}
+a{
+    color: #D2527F;
+}
+a:hover{
+    color: #D2527F;
+}
+.menu-list div:hover{
+    color: #FFF;
+    background: #D2527F;
+}
+#info{
+    width: 50%;
+    height: 100%;
+    float: left;
+    font-family: 'roboto';
+    font-size: 30px;
+    line-height: 40px;
+    background: rgba(256,256,256,1);
+    padding-left: 50px;
+    padding-right: 50px;
+    transition: all 1s ease;
+    transition-delay:.5s;
+    opacity: 0;
+}
+#tile{
+    background: #D2527F;
+    color: #FFF;
+    padding: 10px;
+    font-size: 90px;
+    margin-bottom: 10px;
+}
+#line{
+    width: 5px;
+    background: Black;
+    position: absolute;
+    height: 100%;
+    float: left;
+}
+button{
+    background: transparent;
+    color: #D2527F;
+    border: solid 2px #D2527F;
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+    transition: all .5s ease;
+    font-size: 20px;
+}
+button:hover{
+    background: #D2527F;
+    color: #FFF;
+}
+#link{
+    position: absolute;
+    text-align: center;
+    color: #FFF;
+    bottom: 30px;
+    left: 49%;
+    -webkit-animation: linkkey 1s infinite;
+    -moz-animation: linkkey 1s infinite;
+    animation: linkkey 1s infinite;
+}
+input[type="text"]{
+    width: 200px;
+    transition: all .5s ease;
+}
+.c{
+    transition: all .3s ease-in-out;
+}
+input[type="text"]:focus{
+    box-shadow: 0 0 5px #D2527F;
+    border-color: #D2527F; 
+    background: #FFF;
+    color: #D2527F;
+    transition: all 2s ease;
+}
+#demo
+{
+    transition: all 2s ease;
+}
+#up{
+    opacity: .5;
+    transition: all .5s ease;
+}
+#up:hover{
+    opacity: 1;
+}
+#l{
+    opacity: .2;
+    transition: all .5s ease;
+}
+#l:hover{
+    opacity: 1;
+}
+#m-list,#m-list-m{
+    position: fixed;
+    top: 0;
+    //background: #fff;
+    opacity: 1;
+    height: 100%;
+    color: #FFF;
+    font-size: 25px;
+    z-index: +30;
+    text-align: center;
+    font-family: 'roboto';
+}
+#m-content,#m-content-m{
+    margin-top: 5%;
+}
+#m-content a,#m-content-m a{
+    padding: 20px;
+    color: #FFF;
+    font-weight: bolder;
+}
+#i{
+    width: 300px;
+    font-size: 20px;
+}
+#small_row,#medium_row{
+    background:#D2527F;
+}
+#small-title,#medium-title{
+    font-size: 20px;
+    font-family: myfont;
+    text-align: center;
+    color: #FFF;
+}
+#small-text{
+    color: #D2527F;
+    text-align: center;
+    padding: 30px;
+    font-family: 'roboto';
+    line-height: 20px;
+}
+#menu-button,#menu-button-m{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background: #616161;
+    bottom: 20px;
+    right: 20px;
+    opacity: 1;
+    z-index: +5;
+    transition: all .5s ease;
+    border: 1px solid #ffee58;
+}
+#close,#close1,#close-m,#close1-m{
+    position:absolute;
+    bottom:30px;
+    right:30px;
+    width: 0px;
+    height:4px;
+    background:#FFF;
+    transition: all .5s;
+    transition-timing-function: ease;
+    transition-delay: .3s;
+    transform-origin: center;
+}
+@-webkit-keyframes linkkey{
+    50%{
+        transform: translateY(10px);
+    }
+    90%{
+        transform: translateY(0px);
+    }
+}
+@-moz-keyframes linkkey{
+    50%{
+        transform: translateY(10px);
+    }
+    90%{
+        transform: translateY(0px);
+    }
+}
+@keyframes linkkey{
+    50%{
+        transform: translateY(10px);
+    }
+    90%{
+        transform: translateY(0px);
+    }
+}
+@media screen and (max-width : 1366px){
+        button{
+            width: 200px;
+        }
+    #insert{
+        font-size: 50px;
+    }
+    #blink{
+        transition: all .2s ease;
+        height: 70px;
+        width: 5px;
+        position:absolute;
+        background: #FFF;
+    }
+    #attach{
+        width: 50px;
+        height: 20px;
+        position: absolute;
+        background: #FFF;
+    }
+    #i{
+        width:200px;
+    }
+}
+@media screen and (max-width : 1024px){
+    #medium-title{
+        font-size: 50px;
+    }
+    #small-text{
+        line-height: 30px;
+    }
+}
+@media screen and (max-width : 400px){
+    #l{
+        font-size: 15px;
+    }
+    button{
+        font-size: 15px;
+    }
+    input[type="text"]{
+        width: 300px;
+        transition: all .5s ease;
+    }
+    #insert-demo{
+        font-size: 10px;
+    }
+}

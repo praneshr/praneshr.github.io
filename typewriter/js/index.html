@@ -1,0 +1,99 @@
+<html style="overflow:hidden">
+    <head>
+        <title>Type Writter</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="content">
+            <span id="insert"></span>
+            <span id="blink"><span id="attach"></span></span>
+        </div>
+        <div id="circle">
+            <span class="menu"></span>
+            <span class="menu"></span>
+            <span class="menu"></span>
+        </div>
+        <div id="circlee">
+            <div style="position:absolute;top:200px;right200px;">
+                hello
+            </div>
+        </div>
+    </body>
+    <script>
+        function animate(){
+            insert.innerHTML=arr[0].slice(0,temp);
+            temp++;
+            if(initial < count)
+            {
+                setTimeout(function(){
+                    animate();
+                },Math.floor(Math.random() * (200-100))+100); 
+            }
+            initial++;
+        }
+        function blink1(){
+            if(i == 0)
+            {
+                setTimeout(function(){
+                    blink.style.opacity=1;
+                    i=1;
+                    blink1();
+                },500);
+            }
+            if(i == 1)
+            {
+                setTimeout(function(){
+                    blink.style.opacity=0;
+                    i=0;
+                    blink1();
+                },500);
+            }
+        }
+        var circle = document.getElementById("circle");
+        var menu = document.getElementsByClassName("menu");
+        var circlee = document.getElementById("circlee");
+        var attach = document.getElementById("attach");
+        var insert = document.getElementById("insert");
+        var blink = document.getElementById("blink");
+        var content = document.getElementsByClassName("content");
+        content[0].style.marginTop=((innerHeight/2)-100)+"px";
+        var str = "TypeWriter";
+        var arr = [str];
+        var count = arr[0].length;
+        i = 1;
+        temp = 1;
+        initial =0;
+        animate();
+        blink1();
+        t = 1;
+        circle.addEventListener("click",function(){
+            if(t%2 == 1)
+            {
+                circlee.style.width="1000px";
+                circlee.style.height="1000px";
+                circlee.style.borderRadius="500px";
+                circlee.style.transform="scale(10)";
+                circle.style.background="#D2527F";
+                menu[0].style.background="#FFF";
+                menu[1].style.background="#FFF";
+                menu[2].style.background="#FFF";
+
+                t++;
+            }
+            else
+            {
+                circlee.style.width="100px";
+                circlee.style.height="100px";
+                circlee.style.borderRadius="50px";
+                circlee.style.transform="scale(1)";
+                menu[0].style.opacity=1;
+                menu[1].style.opacity=1;
+                circle.style.background="#FFF";
+                menu[0].style.background="#D2527F";
+                menu[1].style.background="#D2527F";
+                menu[2].style.background="#D2527F";
+                t++;
+            }
+        });
+    </script>
+</html>
