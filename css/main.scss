@@ -65,6 +65,19 @@ a {
   overflow: hidden;
   background-color: #0F1021;
   z-index: 10;
+  .cssaw {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    z-index: 10000;
+    a {
+      width: 54px;
+      height: 63px;
+      display: block;
+      background: url(http://www.cssdesignawards.com/badges/award-nominee-cssda-160-r.png) no-repeat;
+      background-size: 54px;
+    }
+  }
   .down {
     width: 30px;
     height: 30px;
@@ -409,6 +422,9 @@ footer {
 
 @media only screen and (min-width: 320px) and (max-width: 767px) {
   .vetti-scene {
+    .cssaw {
+      top: 50px;
+    }
     .peru {
       font-size: 60px;
       position: absolute;
