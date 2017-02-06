@@ -65,6 +65,13 @@ a {
   overflow: hidden;
   background-color: #0F1021;
   z-index: 10;
+  .opl {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    z-index:999999;
+  }
   .cssaw {
     position: absolute;
     right: 0;
@@ -424,6 +431,9 @@ footer {
   .vetti-scene {
     .cssaw {
       top: 50px;
+    }
+    .opl {
+      top: 120px;
     }
     .peru {
       font-size: 60px;
