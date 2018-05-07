@@ -1,0 +1,27 @@
+{
+  "name": "praneshr.github.io",
+  "version": "2.0.0",
+  "description": "Personal website of Pranesh Ravi",
+  "main": "index.html",
+  "repository": "git@github.com:praneshr/praneshr.github.io.git",
+  "author": "Pranesh Ravi <praneshpranesh@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "now": {
+    "alias": "praneshr.now.sh"
+  },
+  "scripts": {
+    "build:dev": "node-sass src/index.scss dist/index.css",
+    "build:watch": "yarn build && node-sass src/index.scss -wo dist",
+    "build": "node-sass src/index.scss dist/index.css --output-style compressed",
+    "start": "http-server",
+    "start:dev": "http-server -c-1",
+    "deploy": "now && now alias"
+  },
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.8.3",
+    "now": "^11.1.7"
+  }
+}
