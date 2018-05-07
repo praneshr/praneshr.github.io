@@ -47,7 +47,7 @@ a {
 .pattern {
   height: 100px;
   width: 100%;
-  background-image: url("/img/pattern.png");
+  background-image: url("/img/pattern.svg");
   opacity: 0.2;
 }
 
@@ -107,6 +107,7 @@ a {
         align-items: center;
         justify-content: center;
         position: relative;
+        min-height: 500px;
         &:hover {
           overflow: hidden;
           img {
@@ -136,28 +137,28 @@ a {
           transition: filter 0.3s ease;
         }
         &.m {
-          background-color: #FF466E;
+          background-color: #ffd3dd;
         }
         &.h {
           background-color: #F4F5FC;
         }
         &.c {
-          background-color: rgb(252, 237, 107);
+          background-color: #fff9c7;
         }
         &.r {
-          background-color: #ffce4f;
+          background-color: #d4eedb;
         }
         &.p {
-          background-color: #4C90F5;
+          background-color: #e3eeff;
         }
         &.i {
           background-color: #ffcec7;
         }
         &.statements {
-          background-color: #8E8AFF;
+          background-color: #e4e3ff;
         }
         &.e {
-          background-color: #d0c0b8;
+          background-color: #efe4df;
         }
       }
       .details {
@@ -200,6 +201,9 @@ a {
     .credit {
       font-size: 20px;
       margin-bottom: 30px;
+    }
+    .license {
+      line-height: 25px;
     }
   }
 }
@@ -253,6 +257,7 @@ a {
           padding: 0;
         }
         .image {
+          min-height: 200px;
           height: 100%;
           padding: 10px;
         }
@@ -289,8 +294,9 @@ a {
           padding-left: 10px;
         }
         .image {
-          height: 350px;
+          height: 100%;
           padding: 10px;
+          min-height: 200px;
         }
         .details {
           .title {

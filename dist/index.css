@@ -1095,7 +1095,7 @@ a {
 .pattern {
   height: 100px;
   width: 100%;
-  background-image: url("/img/pattern.png");
+  background-image: url("/img/pattern.svg");
   opacity: 0.2; }
 
 .content {
@@ -1142,7 +1142,8 @@ a {
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative; }
+        position: relative;
+        min-height: 500px; }
         .content .projects .project .image:hover {
           overflow: hidden; }
           .content .projects .project .image:hover img {
@@ -1167,21 +1168,21 @@ a {
           width: 100%;
           transition: filter 0.3s ease; }
         .content .projects .project .image.m {
-          background-color: #FF466E; }
+          background-color: #ffd3dd; }
         .content .projects .project .image.h {
           background-color: #F4F5FC; }
         .content .projects .project .image.c {
-          background-color: #fced6b; }
+          background-color: #fff9c7; }
         .content .projects .project .image.r {
-          background-color: #ffce4f; }
+          background-color: #d4eedb; }
         .content .projects .project .image.p {
-          background-color: #4C90F5; }
+          background-color: #e3eeff; }
         .content .projects .project .image.i {
           background-color: #ffcec7; }
         .content .projects .project .image.statements {
-          background-color: #8E8AFF; }
+          background-color: #e4e3ff; }
         .content .projects .project .image.e {
-          background-color: #d0c0b8; }
+          background-color: #efe4df; }
       .content .projects .project .details .title {
         font-size: 30px;
         font-weight: 500;
@@ -1212,6 +1213,8 @@ a {
     .contact .footer .credit {
       font-size: 20px;
       margin-bottom: 30px; }
+    .contact .footer .license {
+      line-height: 25px; }
 
 .copy {
   margin-top: 80px;
@@ -1246,6 +1249,7 @@ a {
   .content .projects .project.right, .content .projects .project.left {
     padding: 0; }
   .content .projects .project .image {
+    min-height: 200px;
     height: 100%;
     padding: 10px; } }
 
@@ -1265,8 +1269,9 @@ a {
   .content .projects .project.right {
     padding-left: 10px; }
   .content .projects .project .image {
-    height: 350px;
-    padding: 10px; }
+    height: 100%;
+    padding: 10px;
+    min-height: 200px; }
   .content .projects .project .details .title {
     font-size: 26px;
     margin: 30px 0 20px; }
