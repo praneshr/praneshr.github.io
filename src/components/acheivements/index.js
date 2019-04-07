@@ -6,7 +6,7 @@ import Tile from '../tile'
 const Acheivements = () => {
   const contentNode = data.map((data, i) => {
     return (
-      <a href={data.link} target="_blank">
+      <a href={data.link} target="_blank" style={{ fontWeight: '400' }} key={i}>
         <Grid>
           <Tile
             title={data.title}

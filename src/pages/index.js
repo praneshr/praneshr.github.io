@@ -17,20 +17,20 @@ const main = css({
   maxWidth: 800,
 })
 
-const divider = css({
+const divider = (theme) => css({
   height: 1,
   width: '100%',
   marginTop: 100,
-  background: '#f5f5f5',
+  background: theme.divider,
 })
 
-const work = css({
-  color: '#888',
+const work = (theme) => css({
+  color: theme.textLight,
   marginTop: 20,
   fontSize: 14,
 })
 
-const copy = css({
+const copy = () => css({
   padding: '30px 0 30px 100px',
 })
 

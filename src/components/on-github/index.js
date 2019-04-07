@@ -7,8 +7,8 @@ import Tile from '../tile'
 const OnGithub = () => {
   const contentNode = data.map((data, i) => {
     return (
-      <a href={data.link} target="_blank">
-        <Grid key={i}>
+      <a href={data.link} target="_blank" style={{ fontWeight: '400' }} key={i}>
+        <Grid>
           <Tile title={data.title} description={data.description} />
         </Grid>
       </a>

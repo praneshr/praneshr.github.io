@@ -1,10 +1,10 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-const content = css({
+const content = () => css({
   marginTop: 30,
 })
-const section = css({
+const section = () => css({
   marginTop: 100,
 })
 

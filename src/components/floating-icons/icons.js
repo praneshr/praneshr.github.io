@@ -12,7 +12,6 @@ import typescript from '../../images/typescript.svg'
 import vscode from '../../images/vscode.svg'
 import webpack from '../../images/webpack.svg'
 import babel from '../../images/babel.svg'
-import bitcoin from '../../images/bitcoin.svg'
 import bootstrap from '../../images/bootstrap.svg'
 import buddy from '../../images/buddy.svg'
 import circleci from '../../images/circleci.svg'
@@ -70,9 +69,6 @@ export default [
   },
   {
     light: babel,
-  },
-  {
-    light: bitcoin,
   },
   {
     light: bootstrap,

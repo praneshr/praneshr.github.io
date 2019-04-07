@@ -2,13 +2,10 @@ import React from 'react'
 import { css } from '@emotion/core'
 import { Row, Grid } from '../grids'
 import data from './content'
-import {variables} from '../../styles'
 
-const onGithub = css({
-})
-const content = css({
+const content = (theme) => css({
   marginBottom: 20,
-  boxShadow: variables.cardShadow,
+  boxShadow: theme.cardShadow,
   borderRadius: 4,
   overflow: 'hidden',
   lineHeight: 0,
@@ -30,11 +27,9 @@ const OnGithub = () => {
     )
   })
   return (
-    <div css={onGithub}>
-      <Row>
-        {contentNode}
-      </Row>
-    </div>
+    <Row>
+      {contentNode}
+    </Row>
   )
 }
 

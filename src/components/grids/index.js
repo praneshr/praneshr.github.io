@@ -1,7 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/core'
 
-const row = css({
+const row = () => css({
   margin: '0 -10px',
   '&:after': {
     content: '" "',
@@ -10,7 +10,7 @@ const row = css({
   },
 })
 
-const grid = css({
+const grid = () => css({
   width: '50%',
   padding: '0 10px',
   float: 'left',
