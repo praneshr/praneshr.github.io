@@ -1,0 +1,390 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --md-sys-color-primary: #595992;
+  --md-sys-color-surface-tint: #595992;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #E2DFFF;
+  --md-sys-color-on-primary-container: #414178;
+  --md-sys-color-secondary: #5D5C72;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #E2E0F9;
+  --md-sys-color-on-secondary-container: #454559;
+  --md-sys-color-tertiary: #795369;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #FFD8EB;
+  --md-sys-color-on-tertiary-container: #5F3C51;
+  --md-sys-color-error: #BA1A1A;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #FFDAD6;
+  --md-sys-color-on-error-container: #93000A;
+  --md-sys-color-background: #FCF8FF;
+  --md-sys-color-on-background: #1B1B21;
+  --md-sys-color-surface: #FCF8FF;
+  --md-sys-color-on-surface: #1B1B21;
+  --md-sys-color-surface-variant: #E4E1EC;
+  --md-sys-color-on-surface-variant: #47464F;
+  --md-sys-color-outline: #777680;
+  --md-sys-color-outline-variant: #C8C5D0;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #303036;
+  --md-sys-color-inverse-on-surface: #F3EFF7;
+  --md-sys-color-inverse-primary: #C2C1FF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --md-sys-color-primary: #C2C1FF;
+    --md-sys-color-surface-tint: #C2C1FF;
+    --md-sys-color-on-primary: #2A2A60;
+    --md-sys-color-primary-container: #414178;
+    --md-sys-color-on-primary-container: #E2DFFF;
+    --md-sys-color-secondary: #C6C4DD;
+    --md-sys-color-on-secondary: #2F2F42;
+    --md-sys-color-secondary-container: #454559;
+    --md-sys-color-on-secondary-container: #E2E0F9;
+    --md-sys-color-tertiary: #E9B9D2;
+    --md-sys-color-on-tertiary: #46263A;
+    --md-sys-color-tertiary-container: #5F3C51;
+    --md-sys-color-on-tertiary-container: #FFD8EB;
+    --md-sys-color-error: #FFB4AB;
+    --md-sys-color-on-error: #690005;
+    --md-sys-color-error-container: #93000A;
+    --md-sys-color-on-error-container: #FFDAD6;
+    --md-sys-color-background: #131318;
+    --md-sys-color-on-background: #E4E1E9;
+    --md-sys-color-surface: #131318;
+    --md-sys-color-on-surface: #E4E1E9;
+    --md-sys-color-surface-variant: #47464F;
+    --md-sys-color-on-surface-variant: #C8C5D0;
+    --md-sys-color-outline: #918F9A;
+    --md-sys-color-outline-variant: #47464F;
+    --md-sys-color-shadow: #000000;
+    --md-sys-color-scrim: #000000;
+    --md-sys-color-inverse-surface: #E4E1E9;
+    --md-sys-color-inverse-on-surface: #303036;
+    --md-sys-color-inverse-primary: #595992;
+  }
+}
+[data-theme=light] {
+  --md-sys-color-primary: #595992;
+  --md-sys-color-surface-tint: #595992;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #E2DFFF;
+  --md-sys-color-on-primary-container: #414178;
+  --md-sys-color-secondary: #5D5C72;
+  --md-sys-color-on-secondary: #FFFFFF;
+  --md-sys-color-secondary-container: #E2E0F9;
+  --md-sys-color-on-secondary-container: #454559;
+  --md-sys-color-tertiary: #795369;
+  --md-sys-color-on-tertiary: #FFFFFF;
+  --md-sys-color-tertiary-container: #FFD8EB;
+  --md-sys-color-on-tertiary-container: #5F3C51;
+  --md-sys-color-error: #BA1A1A;
+  --md-sys-color-on-error: #FFFFFF;
+  --md-sys-color-error-container: #FFDAD6;
+  --md-sys-color-on-error-container: #93000A;
+  --md-sys-color-background: #FCF8FF;
+  --md-sys-color-on-background: #1B1B21;
+  --md-sys-color-surface: #FCF8FF;
+  --md-sys-color-on-surface: #1B1B21;
+  --md-sys-color-surface-variant: #E4E1EC;
+  --md-sys-color-on-surface-variant: #47464F;
+  --md-sys-color-outline: #777680;
+  --md-sys-color-outline-variant: #C8C5D0;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #303036;
+  --md-sys-color-inverse-on-surface: #F3EFF7;
+  --md-sys-color-inverse-primary: #C2C1FF;
+}
+
+[data-theme=dark] {
+  --md-sys-color-primary: #C2C1FF;
+  --md-sys-color-surface-tint: #C2C1FF;
+  --md-sys-color-on-primary: #2A2A60;
+  --md-sys-color-primary-container: #414178;
+  --md-sys-color-on-primary-container: #E2DFFF;
+  --md-sys-color-secondary: #C6C4DD;
+  --md-sys-color-on-secondary: #2F2F42;
+  --md-sys-color-secondary-container: #454559;
+  --md-sys-color-on-secondary-container: #E2E0F9;
+  --md-sys-color-tertiary: #E9B9D2;
+  --md-sys-color-on-tertiary: #46263A;
+  --md-sys-color-tertiary-container: #5F3C51;
+  --md-sys-color-on-tertiary-container: #FFD8EB;
+  --md-sys-color-error: #FFB4AB;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000A;
+  --md-sys-color-on-error-container: #FFDAD6;
+  --md-sys-color-background: #131318;
+  --md-sys-color-on-background: #E4E1E9;
+  --md-sys-color-surface: #131318;
+  --md-sys-color-on-surface: #E4E1E9;
+  --md-sys-color-surface-variant: #47464F;
+  --md-sys-color-on-surface-variant: #C8C5D0;
+  --md-sys-color-outline: #918F9A;
+  --md-sys-color-outline-variant: #47464F;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-inverse-surface: #E4E1E9;
+  --md-sys-color-inverse-on-surface: #303036;
+  --md-sys-color-inverse-primary: #595992;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Google Sans Flex", "Outfit", sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Google Sans Flex", "Outfit", sans-serif;
+  font-weight: 700;
+  color: var(--md-sys-color-on-background);
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  color: var(--md-sys-color-on-background);
+  cursor: default;
+}
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 56px;
+  }
+}
+@media (max-width: 600px) {
+  h1 {
+    font-size: 34px;
+  }
+}
+h1 {
+  background-image: radial-gradient(circle at var(--x, -100%) var(--y, -100%), color-mix(in srgb, var(--md-sys-color-tertiary) calc(var(--glow-opacity, 0) * 100%), var(--md-sys-color-on-background)) 0%, color-mix(in srgb, var(--md-sys-color-tertiary) calc(var(--glow-opacity, 0) * 100%), var(--md-sys-color-on-background)) var(--pulse-radius, 20%), var(--md-sys-color-on-background) 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-top: 24px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+@media (max-width: 1024px) {
+  .description {
+    font-size: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .description {
+    font-size: 16px;
+  }
+}
+
+.wave-emoji {
+  font-size: 75px;
+  margin-bottom: 16px;
+  display: block;
+}
+@media (max-width: 1024px) {
+  .wave-emoji {
+    font-size: 60px;
+  }
+}
+@media (max-width: 600px) {
+  .wave-emoji {
+    font-size: 50px;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+}
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+.social-links a {
+  color: var(--md-sys-color-on-surface-variant);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+.social-links a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  background-color: var(--product-color, var(--md-sys-color-primary));
+  top: 5px;
+  left: 5px;
+  z-index: -1;
+  transition: all 0.3s ease;
+  opacity: 0.2;
+}
+.social-links a:hover {
+  color: var(--md-sys-color-on-background);
+}
+.social-links a:hover::before {
+  opacity: 0.4;
+  transform: translate(-2px, -2px);
+}
+.social-links a[href*="github.com"] {
+  --product-color: #181717;
+}
+[data-theme=dark] .social-links a[href*="github.com"] {
+  --product-color: #c9d1d9;
+}
+.social-links a[href*="linkedin.com"] {
+  --product-color: #0077b5;
+}
+.social-links a[href*="dribbble.com"] {
+  --product-color: #ea4c89;
+}
+.social-links a[href*="stackoverflow.com"] {
+  --product-color: #f48024;
+}
+
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+#theme-toggle:hover {
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-background);
+}
+#theme-toggle .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 16px;
+}
+@media (max-width: 600px) {
+  .container {
+    margin-top: 40px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

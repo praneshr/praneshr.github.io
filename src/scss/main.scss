@@ -1,0 +1,224 @@
+@use "reset";
+@use "tokens";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: "Google Sans Flex", "Outfit", sans-serif;
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+// --- Typography ---
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Google Sans Flex", "Outfit", sans-serif;
+  font-weight: 700;
+  color: var(--md-sys-color-on-background);
+}
+
+h1 {
+  font-size: 70px;
+  line-height: 1.1;
+  color: var(--md-sys-color-on-background);
+  cursor: default;
+
+  @media (max-width: 1024px) {
+    font-size: 56px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 34px;
+  }
+
+  // Use variables controlled by JS for dynamic glow
+  // color-mix ensures the glow fades to the text color instead of transparent
+  background-image: radial-gradient(
+    circle at var(--x, -100%) var(--y, -100%),
+    color-mix(
+        in srgb,
+        var(--md-sys-color-tertiary) calc(var(--glow-opacity, 0) * 100%),
+        var(--md-sys-color-on-background)
+      )
+      0%,
+    color-mix(
+        in srgb,
+        var(--md-sys-color-tertiary) calc(var(--glow-opacity, 0) * 100%),
+        var(--md-sys-color-on-background)
+      )
+      var(--pulse-radius, 20%),
+    var(--md-sys-color-on-background) 60%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.description {
+  font-size: 20px;
+  color: var(--md-sys-color-on-surface-variant);
+  margin-top: 24px;
+  max-width: 600px;
+  line-height: 1.6;
+
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+
+.wave-emoji {
+  font-size: 75px;
+  margin-bottom: 16px;
+  display: block;
+
+  @media (max-width: 1024px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 50px;
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 24px;
+  margin-top: 32px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  a {
+    color: var(--md-sys-color-on-surface-variant);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      background-color: var(--product-color, var(--md-sys-color-primary));
+      top: 5px;
+      left: 5px;
+      z-index: -1;
+      transition: all 0.3s ease;
+      opacity: 0.2;
+    }
+
+    &:hover {
+      color: var(--md-sys-color-on-background);
+
+      &::before {
+        opacity: 0.4;
+        transform: translate(-2px, -2px);
+      }
+    }
+
+    &[href*="github.com"] {
+      --product-color: #181717;
+      [data-theme="dark"] & {
+        --product-color: #c9d1d9;
+      }
+    }
+    &[href*="linkedin.com"] {
+      --product-color: #0077b5;
+    }
+    &[href*="dribbble.com"] {
+      --product-color: #ea4c89;
+    }
+    &[href*="stackoverflow.com"] {
+      --product-color: #f48024;
+    }
+  }
+}
+
+// --- Header & Toggle ---
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 0;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--md-sys-color-on-surface-variant);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+
+  &:hover {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-background);
+  }
+
+  .material-symbols-outlined {
+    font-size: 24px;
+  }
+}
+
+// --- Layout ---
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 0 16px;
+
+  @media (max-width: 600px) {
+    margin-top: 40px;
+  }
+}
