@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pranesh Ravi</title>
+    <meta
+      name="description"
+      content="Personal site of Pranesh Ravi, an engineer at Google in New York specializing in design systems and component libraries."
+    />
+    <meta name="author" content="Pranesh Ravi" />
+    <link rel="canonical" href="https://praneshravi.in/" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://praneshravi.in/" />
+    <meta property="og:title" content="Pranesh Ravi | Personal Site" />
+    <meta
+      property="og:description"
+      content="Personal site of Pranesh Ravi, an engineer at Google in New York specializing in design systems and component libraries."
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Pranesh Ravi | Personal Site" />
+    <meta
+      name="twitter:description"
+      content="Personal site of Pranesh Ravi, an engineer at Google in New York specializing in design systems and component libraries."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <button id="theme-toggle" aria-label="Toggle theme">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </header>
+      <div class="wave-emoji">👋</div>
+      <h1>Hi, I'm Pranesh Ravi</h1>
+      <p class="description">
+        I'm an engineer at Google in New York, where I work at the intersection
+        of UX and engineering, with a strong focus on engineering. I specialize
+        in building robust component libraries and design systems that scale
+        across platforms.
+      </p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/praneshr" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://dribbble.com/praneshr/"
+            target="_blank"
+            rel="noopener"
+            >Dribbble</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://stackoverflow.com/users/4945468/pranesh-ravi"
+            target="_blank"
+            rel="noopener"
+            >Stack Overflow</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/pranesh-ravi/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+    </div>
+    <script>
+      // Theme Toggle Logic
+      const toggleBtn = document.getElementById("theme-toggle");
+      const icon = toggleBtn.querySelector(".material-symbols-outlined");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function updateIcon(isDark) {
+        icon.textContent = isDark ? "light_mode" : "dark_mode";
+      }
+
+      // Set initial icon based on system preference
+      updateIcon(prefersDark.matches);
+
+      toggleBtn.addEventListener("click", () => {
+        const currentTheme =
+          document.documentElement.getAttribute("data-theme");
+        let newTheme;
+
+        if (currentTheme) {
+          newTheme = currentTheme === "dark" ? "light" : "dark";
+        } else {
+          newTheme = prefersDark.matches ? "light" : "dark";
+        }
+
+        document.documentElement.setAttribute("data-theme", newTheme);
+        updateIcon(newTheme === "dark");
+      });
+
+      prefersDark.addEventListener("change", (e) => {
+        const newTheme = e.matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        updateIcon(e.matches);
+      });
+
+      const h1 = document.querySelector("h1");
+      let angle = 0;
+      let rafId = null;
+      let isHovered = false;
+      let currentOpacity = 0;
+
+      function updateGlow(clientX, clientY) {
+        const rect = h1.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        h1.style.setProperty("--x", `${x}px`);
+        h1.style.setProperty("--y", `${y}px`);
+
+        if (!isHovered) {
+          isHovered = true;
+          if (!rafId) animate();
+        }
+      }
+
+      document.addEventListener("pointermove", (e) => {
+        updateGlow(e.clientX, e.clientY);
+      });
+
+      document.addEventListener("touchmove", (e) => {
+        const touch = e.touches[0];
+        updateGlow(touch.clientX, touch.clientY);
+      });
+
+      document.addEventListener("touchstart", (e) => {
+        const touch = e.touches[0];
+        updateGlow(touch.clientX, touch.clientY);
+      });
+
+      document.addEventListener("pointerleave", () => {
+        isHovered = false;
+      });
+
+      document.addEventListener("touchend", () => {
+        isHovered = false;
+      });
+
+      function animate() {
+        // Handle fade in/out
+        if (isHovered && currentOpacity < 1) {
+          currentOpacity += 0.1;
+          if (currentOpacity > 1) currentOpacity = 1;
+        } else if (!isHovered && currentOpacity > 0) {
+          currentOpacity -= 0.05;
+          if (currentOpacity < 0) currentOpacity = 0;
+        }
+
+        h1.style.setProperty("--glow-opacity", currentOpacity);
+
+        // Handle pulse
+        angle += 0.05;
+        const pulse = Math.sin(angle) * 5 + 20; // Oscillate between 15% and 25%
+        h1.style.setProperty("--pulse-radius", `${pulse}%`);
+
+        if (currentOpacity > 0 || isHovered) {
+          rafId = requestAnimationFrame(animate);
+        } else {
+          rafId = null;
+        }
+      }
+    </script>
+  </body>
+</html>

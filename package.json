@@ -1,0 +1,21 @@
+{
+  "name": "praneshravi.in",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "sass src/scss/main.scss dist/css/main.css",
+    "watch:css": "sass src/scss/main.scss dist/css/main.css --watch",
+    "start": "http-server .",
+    "dev": "sass src/scss/main.scss dist/css/main.css --watch & browser-sync start --server --files \"*.html, dist/css/*.css\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "browser-sync": "^3.0.4",
+    "http-server": "^14.1.1",
+    "sass": "^1.99.0"
+  }
+}
